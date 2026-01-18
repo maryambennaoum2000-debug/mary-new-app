@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Travel Companion</title>
-    <style>
-        body { font-family: sans-serif; background-color: #f0f4f8; text-align: center; padding: 20px; }
-        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; }
-        .btn-reminder { background-color: #e67e22; color: white; padding: 12px 25px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; margin: 20px 0; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .item { background: #ecf0f1; padding: 10px; border-radius: 8px; font-weight: bold; }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>🌍 Smart Travel Companion</h1>
-        <p>استكشف أفضل 10 وجهات سياحية مع مريم</p>
-        <button class="btn-reminder" onclick="alert('تم تفعيل التذكير بنجاح!')">Set Reminder 🔔</button>
-        <div class="grid">
-            <div class="item">المغرب 🇲🇦</div> <div class="item">فرنسا 🇫🇷</div>
-            <div class="item">اليابان 🇯🇵</div> <div class="item">تركيا 🇹🇷</div>
-            <div class="item">إيطاليا 🇮🇹</div> <div class="item">إسبانيا 🇪🇸</div>
-            <div class="item">سويسرا 🇨🇭</div> <div class="item">الإمارات 🇦🇪</div>
-            <div class="item">مصر 🇪🇬</div> <div class="item">تايلاند 🇹🇭</div>
+<body class="bg-slate-50 font-sans text-slate-900">
+    <nav class="bg-white p-4 shadow-sm sticky top-0 z-50 flex justify-between items-center">
+        <div class="flex items-center gap-2 text-sky-600 font-bold text-xl">
+            <span>✈️</span> SmartTravel
         </div>
+    </nav>
+
+    <main class="p-4 max-w-md mx-auto space-y-8 pb-32">
+        <h1 class="text-3xl font-extrabold text-slate-800 leading-tight text-center">Discover Your Favorite Destinations</h1>
+
+        <div class="grid grid-cols-1 gap-6">
+            <div class="relative rounded-3xl overflow-hidden shadow-lg h-56"><img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600" class="w-full h-full object-cover"><div class="absolute bottom-0 inset-x-0 bg-black/50 p-4 text-white font-bold">Paris, France</div></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-lg h-56"><img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=600" class="w-full h-full object-cover"><div class="absolute bottom-0 inset-x-0 bg-black/50 p-4 text-white font-bold">Giza, Egypt</div></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-lg h-56"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600" class="w-full h-full object-cover"><div class="absolute bottom-0 inset-x-0 bg-black/50 p-4 text-white font-bold">Kyoto, Japan</div></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-lg h-56"><img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=600" class="w-full h-full object-cover"><div class="absolute bottom-0 inset-x-0 bg-black/50 p-4 text-white font-bold">Venice, Italy</div></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-lg h-56"><img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600" class="w-full h-full object-cover"><div class="absolute bottom-0 inset-x-0 bg-black/50 p-4 text-white font-bold">Istanbul, Turkey</div></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-lg h-56"><img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600" class="w-full h-full object-cover"><div class="absolute bottom-0 inset-x-0 bg-black/50 p-4 text-white font-bold">Chefchaouen, Morocco</div></div>
+        </div>
+
+        <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 space-y-4">
+            <h3 class="font-bold text-xl mb-2">💡 Smart Budget Tips</h3>
+            <div class="p-3 bg-blue-50 rounded-2xl text-sm font-medium">✈️ Book flights 3 months in advance.</div>
+            <div class="p-3 bg-purple-50 rounded-2xl text-sm font-medium">🏨 Stay in local guest houses.</div>
+        </div>
+    </main>
+
+    <div class="fixed bottom-6 left-6 right-6">
+        <button onclick="alert('Reminder Set!')" class="w-full bg-orange-500 text-white py-4 rounded-2xl font-bold text-lg shadow-xl">🔔 Set Reminder</button>
     </div>
 </body>
 </html>
+
